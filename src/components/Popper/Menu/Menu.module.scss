@@ -1,0 +1,11 @@
+//menu wrapper setting
+
+.setting-items {
+    width: 224px;
+    // menu item
+    .menu-item {
+        margin-left: 0;
+        display: flex;
+        justify-content: start;
+    }
+}

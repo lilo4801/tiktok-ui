@@ -85,43 +85,22 @@
     display: flex;
 }
 
-.upload-btn {
-    width: 111px;
-    cursor: pointer;
-    background-color: transparent;
-    font-size: 1.6rem;
-    border: 1px solid rgba(22, 24, 35, 0.06);
-    span {
-        margin-left: 8px;
-        font-weight: 600;
-        line-height: 24px;
-    }
-    &:hover {
-        background-color: rgba(22, 24, 35, 0.03);
-    }
+.search-result {
+    width: 361px;
 }
 
-.login-btn {
-    width: 100px;
-    background-color: var(--primary);
-    height: 36px;
-    padding: 6px 8px;
-    margin-left: 16px;
-    color: white;
-    border-radius: 4px;
-    font-weight: 700;
-    font-size: 1.5rem;
-    cursor: pointer;
-    &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
-    }
+.search-title {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1.4rem;
+    padding: 5px 12px;
 }
 
 .setting {
-    padding: 0 4px;
+    padding: 4px 8px;
     margin-left: 16px;
     cursor: pointer;
     display: flex;
     align-items: center;
     font-size: 1.8rem;
+    background-color: transparent;
 }
