@@ -7,10 +7,8 @@
     cursor: pointer;
     background-color: white;
     border: 1px solid transparent;
-
-    + .wrapper {
-        margin-left: 16px;
-    }
+    margin-left: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .primary {
@@ -78,3 +76,5 @@
     margin: 0px;
     text-align: center;
 }
+
+// btn-icon
