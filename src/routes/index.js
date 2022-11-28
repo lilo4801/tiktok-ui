@@ -23,6 +23,10 @@ const publicRoutes = [
         path: '/search',
         component: Upload,
         layout: null
+    },
+    {
+        path: '/@:nickname',
+        component: Upload
     }
 ]
 
