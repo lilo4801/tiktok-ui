@@ -8,7 +8,6 @@ const cx = classNames.bind(styles);
 
 const AccountItem = ({ account }) => {
 
-
     return (
         <Link to={`@${account.nickname}`} className={cx('wrapper')}>
             <img className={cx('avatar')} src={account.avatar} alt={account.nickname} />

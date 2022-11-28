@@ -95,7 +95,6 @@ const Header = () => {
             separate: true,
         },
     ]
-
     return <header className={cx('wrapper')}>
         <div className={cx('inner')}>
             <Image src={images.logo} alt="Tiktok" />
