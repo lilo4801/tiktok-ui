@@ -24,7 +24,6 @@ const Menu = ({ children, items = [], hideOnClick = false, onChange = () => { } 
             const isParent = !!item.childrenItem
             return <MenuItem
                 onClick={() => {
-
                     if (isParent) {
                         setHistory(prev => [
                             ...prev,
@@ -36,28 +35,32 @@ const Menu = ({ children, items = [], hideOnClick = false, onChange = () => { } 
                 }} key={index} data={item} />
         })
     }
+
+    const handleResetToFirst = () => setHistory(prev => prev.slice(0, 1))
+
+    const renderResult = attrs => (
+        <div className={cx('setting-items')} tabIndex="-1" {...attrs}>
+            <PopperWrapper>
+                {current.title &&
+                    <Header
+                        onBack={() => {
+                            setHistory(prev => prev.slice(0, prev.length - 1))
+                        }}
+                        title={current.title}
+                    />}
+                <div className={cx('menu-body')}>
+                    {renderItems()}
+                </div>
+            </PopperWrapper>
+        </div>
+    )
     return (
         <Tippy
             interactive
             placement='bottom-end'
-            //  delay={[0, 1000]}
-            render={attrs => (
-                <div className={cx('setting-items')} tabIndex="-1" {...attrs}>
-                    <PopperWrapper>
-                        {current.title &&
-                            <Header
-                                onBack={() => {
-                                    setHistory(prev => prev.slice(0, prev.length - 1))
-                                }}
-                                title={current.title}
-                            />}
-                        <div className={cx('menu-body')}>
-                            {renderItems()}
-                        </div>
-                    </PopperWrapper>
-                </div>
-            )}
-            onHide={() => setHistory(prev => prev.slice(0, 1))}
+            delay={[0, 1000]}
+            render={renderResult}
+            onHide={handleResetToFirst}
             hideOnClick={hideOnClick}
         >
             {children}

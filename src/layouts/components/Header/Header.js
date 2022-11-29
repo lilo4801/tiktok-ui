@@ -242,7 +242,7 @@ const Header = () => {
                     !currentUser &&
                     <>
                         <Button leftIcon={<FontAwesomeIcon icon={faPlus} />} linkBtn><span>Upload</span></Button>
-                        <Button primary>
+                        <Button primary >
                             Log In
                         </Button>
 
