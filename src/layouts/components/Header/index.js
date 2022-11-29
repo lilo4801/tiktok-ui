@@ -23,7 +23,8 @@ import Button from '~/components/Button';
 import { faBitcoin } from '@fortawesome/free-brands-svg-icons';
 import Image from '~/components/Image';
 import Search from '../Search';
-
+import { Link } from 'react-router-dom';
+import config from '~/config';
 
 
 const cx = classNames.bind(styles);
@@ -45,7 +46,143 @@ const MENU_ITEMS = [
                 {
                     code: 'Jpn',
                     title: 'Japan'
+                },
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
                 }
+                ,
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
+                }
+                ,
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
+                }
+                ,
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
+                },
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
+                },
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
+                },
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
+                },
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
+                },
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
+                },
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
+                },
+                {
+                    code: 'en',
+                    title: 'English'
+                },
+                {
+                    code: 'vi',
+                    title: 'Tieng Viet'
+                },
+                {
+                    code: 'Jpn',
+                    title: 'Japan'
+                }
+
 
             ]
         }
@@ -97,7 +234,7 @@ const Header = () => {
     ]
     return <header className={cx('wrapper')}>
         <div className={cx('inner')}>
-            <Image src={images.logo} alt="Tiktok" />
+            <Link className={cx('logo-link')} to={config.routes.home}><Image src={images.logo} alt="Tiktok" /></Link>
             {/* search */}
             <Search />
             <div className={cx('actions')}>

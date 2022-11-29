@@ -1,5 +1,4 @@
-
-
+import PropTypes from 'prop-types';
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames/bind";
@@ -14,6 +13,11 @@ const Header = ({ onBack, title, }) => {
         </button>
         <h4 className={cx('header-title')}>{title}</h4>
     </header>
+}
+
+Header.propTypes = {
+    onBack: PropTypes.func,
+    title: PropTypes.node.isRequired
 }
 
 export default Header;

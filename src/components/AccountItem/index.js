@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
 import styles from "./AccountItem.module.scss";
-
+import PropTypes from "prop-types";
 const cx = classNames.bind(styles);
 
 const AccountItem = ({ account }) => {
@@ -23,6 +23,10 @@ const AccountItem = ({ account }) => {
             </div>
         </Link>
     )
+}
+
+AccountItem.propTypes = {
+    account: PropTypes.object.isRequired
 }
 
 export default AccountItem;
